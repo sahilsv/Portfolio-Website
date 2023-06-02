@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { HeroSm, HeroMd, HeroLg, PortfolioPattern } from "../../assets";
 import Scroller from "../../components/scroller";
+import { portfolioData } from "../../data";
 
 function Home() {
   return (
@@ -81,26 +82,89 @@ function Home() {
         </div>
       </section>
 
-      <Scroller text={"Have a project in mind?👨‍💻 Let's get to work!🚀"} link="/contact" />
+      <Scroller
+        text={"Have a project in mind?👨‍💻 Let's get to work!🚀"}
+        link="/contact"
+      />
 
-      <section id="work" className="px-4 pb-12 border-black border-t-2 bg-teal-600 bg-fixed" style={{backgroundImage: "url(" +PortfolioPattern + ")"}}>
-
+      <section
+        id="work"
+        className="px-4 pb-12 border-black border-t-2 bg-teal-600 bg-fixed"
+        style={{ backgroundImage: "url(" + PortfolioPattern + ")" }}
+      >
         <div className="container mx-auto">
-          <div className="">
-
+          <div className="text-white text-center py-12">
+            <h1 className="text-4xl lg:text-5xl xl:text-7xl font-bold mb-4">
+              Selected Work
+            </h1>
+            <p className="max-w-xl mx-auto text-lg">
+              I've been learning various technologies with the aim of becoming a
+              full stack developer.
+            </p>
           </div>
 
+          <div className="grid md:grid-cols-2 gap-8 mb-28">
+            {portfolioData.map((item, index) => (
+              <Link
+                to={item.link}
+                key={index}
+                className="md:even:pt-12 ease-in-out duration-75 hover:translate-y-[-4px] hover:drop-shadow-[10px_8px_0_rgba(0,0,0,1)]"
+              >
+                <div className="border-2 border-black rounded-xl overflow-hidden bg-black">
+                  <img src={item.thumbnail} alt={item.alt} loading="lazy" />
+                </div>
 
+                <div className="bg-white border-x-2 border-black border-b-2 rounded-b-xl mx-4 p-4 text-lg flex justify-between gap-4 items-center">
+                  <div>
+                    <span className="font-bold">{item.title} </span>
+                    <span className="text-zinc-400">
+                      &#9679;{item.category}
+                    </span>
+                  </div>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            to={"/work"}
+            className="flex gap-4 font-bold text-white text-xl justify-center mb-8"
+          >
+            View all work
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </Link>
         </div>
-
-
-
-
       </section>
 
-
-
-
+      <section className="py-48"></section>
     </div>
   );
 }

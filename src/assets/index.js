@@ -12,6 +12,7 @@ import YouTube from './icons/youtube.svg'
 import Twitter from './icons/twitter.svg'
 import Github from './icons/github.svg'
 import Discourd from './icons/discourd.svg'
+import Leetcode from './icons/leetcode.svg'
 import HarleyCover from './harley-davidson.jpg'
 import HarleyWebsite from './harley-website.jpg'
 
@@ -30,6 +31,7 @@ export {
   Twitter,
   Github,
   Discourd,
+  Leetcode,
   HarleyCover,
   HarleyWebsite
 }
