@@ -45,18 +45,24 @@ import {
       name: "YouTube",
       icon: YouTube,
       alt: "Follow me on YouTube",
+      width: '39',
+      height: '28',
       link: "https://www.youtube.com/@sahilsinghvirdhi2211/featured"
     },
     {
       name: "GitHub",
       icon: Github,
       alt: "Fork me on GitHub",
+      width: '29',
+      height: '28',
       link: "https://github.com/sahilsv",
     },
     {
       name: "Leetcode",
       icon: Leetcode,
       alt: "Follow me on Leetcode",
+      width: '29',
+      height: '28',
       link: "https://leetcode.com/baba___Yagaa/",
     }
   ]

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { HeroSm, HeroMd, HeroLg, PortfolioPattern } from "../../assets";
 import Scroller from "../../components/scroller";
+import Contact from "../../components/contact";
 import { portfolioData } from "../../data";
+import { HeroSm, HeroMd, HeroLg, PortfolioPattern, Services } from "../../assets";
 
 function Home() {
   return (
@@ -164,7 +165,137 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-48"></section>
+      <section className="border-black border-t-2 px-4 py-12">
+        <div className="container mx-auto">
+          <div className="text-center py-12">
+            <h1 className="text-4xl lg:text-5xl xl:text-7xl font-bold mb-4">
+              Services
+            </h1>
+            <p className="max-w-xl mx-auto text-lg">
+              I've been learning various technologies with the aim of becoming a
+              full stack developer.
+            </p>
+          </div>
+
+          <div className="text-black py-12 grid lg:grid-cols-4 items-center ">
+            <div>
+              <h3 className="text-3xl font-bold mb-4">Web design</h3>
+              <p className="mb-4 text-lg">
+                I am a Web development enthusiast, interested in building
+                systems for the web and always looking to learn.
+              </p>
+              <Link
+                to={"/web-design"}
+                className="flex gap-2 items-center font-bold mb-14 text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </Link>
+
+              <h3 className="text-3xl font-bold mb-4">Web development</h3>
+              <p className="mb-4 text-lg">
+                I am a Web development enthusiast, interested in building
+                systems for the web and always looking to learn.
+              </p>
+              <Link
+                to={"/web-development"}
+                className="flex gap-2 items-center font-bold mb-14 text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </Link>
+
+
+            </div>
+
+            <div className="flex justify-center mb-12 md:mb-0 col-span-2">
+              <img src={Services} alt="Services offered by me" width='611' height='764' loading='lazy' className="border-2 border-black rounded-full w-3/5 mb-10 drop-shadow-[10px_-10px_0_rgba(250,204,21,1)]" />
+            </div>
+            <div>
+
+            <h3 className="text-3xl font-bold mb-4">Branding</h3>
+              <p className="mb-4 text-lg">
+                I am a Web development enthusiast, interested in building
+                systems for the web and always looking to learn.
+              </p>
+              <Link
+                to={"/branding"}
+                className="flex gap-2 items-center font-bold mb-14 text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </Link>
+
+              <h3 className="text-3xl font-bold mb-4">Java Development</h3>
+              <p className="mb-4 text-lg">
+                I am a Web development enthusiast, interested in building
+                systems for the web and always looking to learn.
+              </p>
+              <Link
+                to={"/java-development"}
+                className="flex gap-2 items-center font-bold mb-14 text-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </Link>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Contact />
+
+
+      
     </div>
   );
 }
