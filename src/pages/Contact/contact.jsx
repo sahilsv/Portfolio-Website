@@ -1,11 +1,7 @@
-import React from "react";
-
-import Scroller from "../../components/scroller";
-import Contact from "../../components/contact";
+import React from 'react'
 import { socials } from "../../data";
-import { HeroMd } from "../../assets";
 
-function About() {
+function Contact() {
   return (
     <>
       <section className="py-12 border-x-2 border-black">
@@ -14,14 +10,12 @@ function About() {
             <h1 className="text-4xl lg:text-5xl xl:text-7xl font-bold mb-4">
               My Story
             </h1>
-            <p className="mb-2 text-lg">
-              Hi, I'm Sahil. I am a self taught developer residing in Howrah, West Bengal. I have a Bachelor's degree in Electronics and Communication Engineering with interest in Web
-              Development.
+            <p className="mb-6 text-lg">
+              Ever want to contact me? If you're looking for help with your creative business, have a burning question to ask me or simply want to interact, the quickest way to get my attention is to hit me up on my e-mail. 
             </p>
 
-            <p className="mb-2 text-lg">
-              I have built projects using technologies like React, TailwindCSS
-              and MongoDB. Currently upskilling in DevOps.
+            <p className="mb-6 text-xl">
+              Want my e-mail: sahilsv003@gmail.com
             </p>
 
             <div className="text-lg font-bold">Find me on:</div>
@@ -50,23 +44,16 @@ function About() {
             </div>
           </div>
 
+
           <div>
-            <img
-              src={HeroMd}
-              alt="Me programming"
-              className="border-black border-2 rounded-2xl mb-8"
-            />
+            
           </div>
+
         </div>
       </section>
 
-      <Scroller
-        text={"Have a project in mind?👨‍💻 Let's get to work!🚀"}
-        link="/contact"
-      />
-      <Contact />
     </>
-  );
+  )
 }
 
-export default About;
+export default Contact
